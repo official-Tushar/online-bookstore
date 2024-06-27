@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+
+        input[type=text]:focus,
+        textarea:focus,
+        input[type=password]:focus,
+        input[type=tel]:focus {
+            background-color: rgb(236, 250, 255);
+        }
+
+        .btn1 {
+            font-size: 23px;
+            background-color: rgb(112, 247, 103);
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+            padding: 3px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .cont1 {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        #rgt {
+            margin-top: 0px;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            padding: 10px;
+        }
+
+        .cont2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            margin: 1rem;
+        }
+
+        .cont2 :first-child {
+            grid-row: 1 / span 2;
+        }
+
+        fieldset {
+            background-color: white;
+        }
+
+        legend {
+            color: crimson;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-left: -4%;
+        }
+
+        .text {
+            font-size: 20px;
+            padding-left: 12px;
+        }
+
+        span {
+            margin-left: 22px;
+            font-size: 15px;
+        }
+    </style>
+    <script src="Validation.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cont1">
+            <h1 id="rgt">Student Registration Form</h1>
+        </div>
+        <form onsubmit="return validate(event)">
+            <div class="cont2">
+                <fieldset>
+                    <legend> Personal Details</legend>
+                    <label for="fname" class="text">First Name <font color="red">* </font> </label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname" class="text">Last Name <font color="red">* </font> </label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="gender" class="text">Gender <font color="red">* </font> </label> <br>
+                    <span><input type="radio" name="gender" value="Male" required> Male</span><br>
+                    <span><input type="radio" name="gender" value="Female"> Female </span><br>
+                    <span><input type="radio" name="gender" value="Others"> Others </span><br><br>
+                    <label for="hobby" class="text">Hobbies</label> <br>
+                    <span><input type="checkbox" id="cricket" name="hobby" value="Cricket"> Cricket </span><br>
+                    <span><input type="checkbox" id="chess" name="hobby" value="Chess"> Chess </span><br>
+                    <span><input type="checkbox" id="football" name="hobby" value="Football"> Football </span><br>
+                    <span><input type="checkbox" id="singing" name="hobby" value="Singing"> Singing </span><br>
+                    <span><input type="checkbox" id="dancing" name="hobby" value="Dancing"> Dancing </span><br>
+                    <span><input type="checkbox" id="tennis" name="hobby" value="Tennis"> Tennis </span><br>
+                    <span><input type="checkbox" id="badminton" name="hobby" value="Badminton"> Badminton </span><br>
+                    <span><input type="checkbox" id="swimming" name="hobby" value="Swimming"> Swimming </span><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend> Contact Details </legend>
+                    <label for="address" class="text"> Address </label>
+                    <textarea id="address" name="address" required></textarea><br><br>
+                    <label for="mobn" class="text">Mobile Number <font color="red">* </font> </label>
+                    <input type="text" id="mobn" name="mobn"><br><br>
+                </fieldset>
+                <fieldset>
+                    <Legend> Login Credentials </Legend>
+                    <label for="dept" class="text">Department <font color="red">* </font> </label> <br>
+                    <span><input type="radio" name="dept" value="Computer Science and Engineering" required> Computer
+                        Science and Engineering </span><br>
+                    <span><input type="radio" name="dept" value="Electronics and Communication Engineering">
+                        Electronics and Communication Engineering </span><br>
+                    <span><input type="radio" name="dept" value="Electrical Engineering"> Electrical
+                        Engineering
+                    </span><br>
+                    <span><input type="radio" name="dept" value="Mechanical Engineering"> Mechanical
+                        Engineering
+                    </span><br>
+                    <span><input type="radio" name="dept" value="Civil Engineering"> Civil Engineering
+                    </span><br>
+                    <label for="email" class="text">Enter E-mail Id <font color="red">* </font>
+                    </label>
+                    <input type="text" id="email" name="email"><br><br>
+                    <label for="password" class="text">Password (Minimum 8 characters) <font color="red">* </font>
+                    </label>
+                    <input type="password" id="password" name="password"><br><br>
+                </fieldset>
+            </div>
+            <div class="btn" style="padding-left: 44%;">
+                <input type="submit" value="Register" class="btn1">
+                <input type="reset" value="Reset" class="btn1" style="margin-left: 10px;">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

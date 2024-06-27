@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Student Login Page</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            align-items: center;
+        }
+
+        #bg {
+            width: 435px;
+            height: 490px;
+        }
+
+        .rectangle {
+            padding: 15px;
+            height: 360px;
+            width: 540px;
+            border: 2px solid black;
+            border-radius: 15px 50px 30px;
+        }
+
+        #login,
+        #pwd {
+            width: 6opx;
+            height: 70px;
+        }
+
+        #username,
+        #password {
+            padding: 12px 20px;
+            border: 2px solid rgb(20, 2, 85);
+            border-radius: 4px;
+            font-size: 25px;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: rgb(236, 250, 255);
+        }
+
+        h1 {
+            font: bold 40px math;
+            margin: 5px;
+        }
+
+        .user,
+        .image {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-gap: 2rem;
+            margin: 2rem;
+        }
+
+        #sbt {
+            font-size: 23px;
+            background-color: rgb(112, 247, 103);
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+            padding: 3px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="pic21.jpg" id="bg">
+        </div>
+        <div class="container2">
+            <div class="rectangle">
+                <h1> <u> Log in </u> </h1>
+                <br>
+                <form id="Login-form">
+                    <div class="user">
+                        <img src="pic12.png" id="login">
+                        <input type="text" id="username" placeholder="Enter Email Id">
+                    </div>
+                    <div class="image">
+                        <img src="pic13.png" id="pwd">
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" id="sbt" onclick="loginUser()"> Submit </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('Login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username == "") {
+                alert("Email Id Field is mandatory");
+            }
+            else if (password == "") {
+                alert("Password Field is mandatory");
+            }
+        });
+    </script>
+    <script>
+        function loginUser() {
+            const userl = document.getElementById('username').value;
+            const pswdl = document.getElementById('password').value;
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            let user = users.find(u => u.email === userl);
+            let n = user.dept;
+            if (user && user.password === pswdl) {
+                if (n == 'Computer Science and Engineering') {
+                    window.open("cse.html", "rightframe");
+                }
+                else if (n == 'Electronics and Communication Engineering') {
+                    window.open("ece.html", "rightframe");
+                }
+                else if (n == 'Electrical Engineering') {
+                    window.open("eee.html", "rightframe");
+                }
+                else if (n == 'Mechanical Engineering') {
+                    window.open("mech.html", "rightframe");
+                }
+                else if (n == 'Civil Engineering') {
+                    window.open("ce.html", "rightframe");
+                }
+            }
+            else {
+                alert('Invalid Login Id or password. Please try again.');
+            }
+        }
+    </script>
+</body>
+
+</html>

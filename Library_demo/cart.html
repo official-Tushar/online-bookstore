@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cart</title>
+  <style>
+    body {
+      margin: 0px;
+      padding-bottom: 10px;
+    }
+
+    .cont {
+      width: 100%;
+      height: 60px;
+      background-color: black;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 40px;
+      color: white;
+      margin-top: 0px;
+    }
+    #vid1{
+      position: absolute;
+      left: 150px;
+    }
+    #line1{
+      position: absolute;
+      z-index: 2;
+      font-size: 30px;
+      top: 300px;
+      left: 390px;
+    }
+    #line2{
+      position: absolute;
+      z-index: 2;
+      font-size: 20px;
+      color: blue;
+      top: 350px;
+      left: 420px;
+    }
+    #buy-now {
+    border: none;
+    margin-top: 4px;
+    margin-left: 44%;
+    padding: 5px 50px 5px 50px;
+    border-radius: 15px;
+    background-color: rgb(0, 68, 255);
+    }
+    th{
+      font-size: 25px;
+      border: 2px solid rgb(5, 4, 91);
+      background-color: rgb(164, 253, 253);
+    }
+    td{
+      border: 2px solid rgb(5, 4, 91);
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(220, 254, 254);
+    }
+    table{
+      margin: 10px;
+      border: 2px solid rgb(5, 4, 91);
+      border-collapse: collapse;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function readLocalStorage() {
+  const data = JSON.parse(localStorage.getItem('dataset'));
+  if (data && data.length > 0) {
+    var totalPrice = 0;
+    for (var i = 0; i < data.length; i++) {
+      var row = $('<tr></tr>');
+      var productCell = $('<td></td>').text(data[i].productCell);
+      var descriptionCell = $('<td></td>').text(data[i].descriptionCell);
+      var priceCell = $('<td></td>').text(data[i].priceCell);
+      var imageCell = $('<td></td>').html('<img src="' + data[i].imageCell + '" style="width: 180px; height: 200px; padding: 1px;">');
+
+      row.append(productCell);
+      row.append(descriptionCell);
+      row.append(priceCell);
+      row.append(imageCell);
+      $('#cart-items').append(row);
+      totalPrice += parseFloat(data[i].priceCell);
+    }
+    $('#total-cell').text('₹' + totalPrice.toFixed(2));
+    $('#cart').show();
+    $('#empty').hide();
+  }
+}
+    </script>
+    
+  
+  <script>
+    function checkCartStatus() {
+      var cartItems = $('#cart-items tr');
+      if (cartItems.length === 0) {
+        $('#cart').hide();
+        $('#empty').show();
+      } else {
+        $('#cart').show();
+        $('#empty').hide();
+      }
+    }
+    $(document).ready(function () {
+      checkCartStatus();
+    });
+  </script>
+</head>
+
+<body>
+  
+  <div class="cont">
+    <h1> <b>Shopping Cart</b></h1>
+  </div>
+  <div id="empty">
+    <video autoplay width="700px" height="400px" loop id="vid1">
+      <source src="vid1.mp4" type="video/mp4">
+    </video>
+    <p id="line1"><b>Your Cart is empty</b> </p><br><br>
+    <p id="line2"> Pick up where you left</p>
+  </div>
+  <div id="cart">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: right;"><strong>Total:</strong></td>
+          <td id="total-cell">₹0.00</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button id="buy-now" onclick="window.location.href = 'order.html'" style="color: white;">Buy Now</button>
+  </div>
+  <script>
+    $(document).ready(function() {
+      readLocalStorage();
+    });
+  </script>
+</body>
+
+</html>

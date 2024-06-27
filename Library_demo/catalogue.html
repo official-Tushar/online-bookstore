@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogue</title>
+    <link rel="stylesheet" href="book.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="addToCart.js"></script>
+</head>
+<body>
+    <div class="cont">
+        <h1> <b>Catalogue</b></h1>
+    </div>
+    <div class="container">
+        <div class="book">
+            <div><img src="cseb1.jpg"></div>
+            <div class="name">
+                <p class="main1">GATE 2019 Computer Science and Information Technology</p>
+                <p class="main2"> Engineering Masterpiece</p>
+                <p class="main3">with 10 practice sets (6 in book and 4 online sets)</p>
+                <p class="main4"> by DISHA publications | 6<sup>th</sup> Edition</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>762</b></span>
+                    M.R.P. : <span style="text-decoration: line-through; color: gray;">₹899</span> (15% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('GATE 2019 Computer Science and Information Technology', 'Engineering Masterpiece with 10 practice sets (6 in book and 4 online sets) by DISHA publications', 762, 'cseb1.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now"
+                    style="font-size: 17px;"> Buy Now </button>
+            </div>
+        </div>
+        <div class="book"><img src="cseb2.jpeg">
+            <div class="name">
+                <p class="main1">Innovations in Computer Science and Engineering</p>
+                <p class="main2">Proceedings of the Ninth ICICSE, 2021</p>
+                <p class="main3"> by H.S. Saini, Rishi Sayal, A. Govardhan, Rajkumar Buyya Editors</p>
+                <p class="main4">Springer</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>399</b></span>
+                    M.R.P. : <span style="text-decoration: line-through; color: gray;">₹950</span> (58% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Innovations in Computer Science and Engineering', 'Proceedings of the Ninth ICICSE, 2021 by H.S. Saini, Rishi Sayal, A. Govardhan, Rajkumar Buyya Editors | Springer', 399, 'cseb2.jpeg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now"
+                    style="font-size: 17px;"> Buy Now </button>
+            </div>
+        </div>
+        <a href="cse.html" style = "font-size:20px; padding-left: 10px;">See More</a>
+        <div class="book"><img src="eceb1.jpg">
+            <div class="name">
+                <p class="main1">Handbook of Electronics and Communication Engineering</p>
+                <p class="main3">(English, Paperback, RPH Editorial Board)</p>
+                <p class="main4">R. Gupta</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>90</b></span><br>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Handbook of Electronics and Communication Engineering', '(English, Paperback, RPH Editorial Board) by R. Gupta', 90, 'eceb1.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px; margin-top: 35px;"> Buy Now </button>
+                </div>
+        </div>
+        <div class="book"><img src="eceb2.jpg">
+            <div class="name">
+                <p class="main1">An Integrated course in Electronics and Communication Engineering</p> 
+                <p class="main2">(With Several Thousands Objective Type Questions & Answers)</p>
+                <p class="main3">By R.K. Rajput</p>
+                <p class="main4">Birla Publications Pvt. Ltd.</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>230</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹290</span> (20% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('An Integrated course in Electronics and Communication Engineering', '(With Several Thousands Objective Type Questions & Answers) by R.K. Rajput | Birla Publications Pvt. Ltd.', 230, 'eceb2.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+                </div>
+        </div>
+        <a href="ece.html" style = "font-size:20px; padding-left: 10px;">See More</a>
+        <div class="book"><img src="ee1.jpg">
+            <div class="name">
+                <p class="main1"> Basic Electrical Engineering</p>
+                <p class="main2">New Age International Publishers</p>
+                <p class="main3">by C L Wadhwa</p>
+                <p class="main4">NEW AGE | Fourth Edition</p> 
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>149</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹599</span> (75% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Basic Electrical Engineering', 'New Age International Publishers by C L Wadhwa NEW AGE | Fourth Edition', 149, 'ee1.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+                </div>
+        </div>
+        <div class="book"><img src="ee2.jpg">
+            <div class="name">
+                <p class="main1">Principles Of Electrical Engineering</p>
+                <p class="main2">for B.E./B.Tech courses of JNTU, Anna and BPTU</p>
+                <p class="main3">by V K Mehta, Rohit Mehta</p>
+                <p class="main4">Second Revised Edition 2008 | S. Chand</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>380</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹399</span> (4% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Principles Of Electrical Engineering', 'for B.E./B.Tech courses of JNTU, Anna and BPTU by V K Mehta, Rohit Mehta Second Revised Edition 2008 | S. Chand', 380, 'ee2.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+                </div>
+        </div>
+        <a href="eee.html" style = "font-size:20px; padding-left: 10px;">See More</a>
+        <div class="book"><img src="meb1.jpg">
+            <div class="name">
+                <p class="main1">Handbook of Mechanical Engineering </p>
+                <p class="main3">by Dr. Sandhu Singh</p>
+                <p class="main4"> 2<sup>nd</sup> Edition - S. Chand  </p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>227</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹252</span> (9% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Handbook of Mechanical Engineering', 'by Dr. Sandhu Singh 2nd Edition | S. Chand', 227, 'meb1.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;margin-top: 25px;"> Buy Now </button>
+                </div>
+        </div>
+        <div class="book"><img src="meb2.jpg">
+            <div class="name">
+                <p class="main1">Fundamentals of Mechanical Engineering</p>
+                <p class="main2">for Diploma And Bachelor Engineers</p>
+                <p class="main3">by Mr. Said Al-Jabri</p>
+                <p class="main4">2017 Edition</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>162</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹168</span> (3% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Fundamentals of Mechanical Engineering', 'for Diploma And Bachelor Engineers by Mr. Said Al-Jabri | 2017 Edition', 162, 'meb2.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+                </div>
+        </div>
+        <a href="mech.html" style = "font-size:20px; padding-left: 10px;">See More</a>
+        <div class="book"><img src="ceb2.jpg">
+            <div class="name">
+                <p class="main1">Civil Engineering</p>
+                <p class="main2">Through Objective type questions</p>
+                <p class="main3"> by S P Gupta, S S Gupta</p> 
+                <p class="main4"> CBS Publishers and Distributers Pvt Ltd </p>  
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>585</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹650</span> (10% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Civil Engineering', 'Through Objective type questions by S P Gupta, S S Gupta | CBS Publishers and Distributers Pvt Ltd', 585, 'ceb2.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+                </div>
+        </div>
+        <div class="book"><img src="ceb3.jpg">
+            <div class="name">
+                <p class="main1">Civil Engineering</p>
+                <p class="main2"> Building Construction</p>
+                <p class="main3"> by T.D. Ahuja, G.S. Birdi</p>
+                <p class="main4">Rajsons Publications Pvt Ltd</p>
+                <p class="main5"> <span style="font-size: 25px;"><sup>₹</sup><b>762</b></span> 
+                M.R.P. : <span style="text-decoration: line-through; color: gray;">₹899</span> (15% off)</p>
+                <button class="bnn1" value="Add to Cart"
+                    style="font-size: 17px;"
+                    onclick="addToCart('Civil Engineering', 'Building Construction by T.D. Ahuja, G.S. Birdi | Rajsons Publications Pvt Ltd', 762, 'ceb3.jpg')">
+                    Add to Cart </button>
+                <button onclick="window.location.href = 'order.html';" class="bnn2" value="Buy Now" style="font-size: 17px;"> Buy Now </button>
+            </div>
+        </div>
+        <a href="ce.html" style = "font-size:20px; padding-left: 10px; padding-bottom: 10px;">See More</a>
+    </div>
+</body>
+
+</html>
