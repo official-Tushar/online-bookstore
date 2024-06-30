@@ -45,9 +45,9 @@ To run this project locally, follow these steps:
     cd online-bookstore/Library_Demo
     ```
 
-3. **Open the `home.html` file in your browser:**
+3. **Open the `index.html` file in your browser:**
 
-    You can simply open the `home.html` file in your preferred web browser to view the project.
+    You can simply open the `index.html` file in your preferred web browser to view the project.
 
 ## Usage
 
